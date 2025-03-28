@@ -1,12 +1,18 @@
-# React + Vite
+## Hướng dẫn chạy ứng dụng trên điện thoại thật qua dây Type-C
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### 1. Cài đặt dependencies
+Chạy lệnh sau trong terminal tại thư mục dự án: npm install
 
-Currently, two official plugins are available:
+### 2. Kết nối điện thoại
+Cắm điện thoại Android vào máy tính qua dây Type-C.
+Bật USB Debugging trên điện thoại (Settings > Developer Options).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 3. Build ứng dụng web
+Build mã React: npm run build
 
-## Expanding the ESLint configuration
+### 4. Đồng bộ với Capacitor
+Đồng bộ mã với Android: npx cap sync.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 5. Chạy ứng dụng trên điện thoại
+Chạy ứng dụng trực tiếp trên điện thoại: npx cap run android
+Chọn thiết bị của bạn từ danh sách (ví dụ: "Samsung Galaxy A50") và nhấn OK.
